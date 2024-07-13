@@ -2,6 +2,9 @@
 import StepLoader from "./components/ui/StepLoader.vue";
 import FormField from "./components/ui/FormField.vue";
 import Button from "./components/ui/Button.vue";
+import TrustpilotBrandIcon from "./components/icons/TrustpilotBrandIcon.vue"
+import PhoneIcon from "./components/icons/PhoneIcon.vue"
+
 </script>
 
 <template>
@@ -11,9 +14,9 @@ import Button from "./components/ui/Button.vue";
         <div class="w-full px-24 my-6">
           <StepLoader />
         </div>
-        <div class="h-full flex flex-col justify-between items-center">
-          <div class="w-full flex flex-row mt-12 gap-5">
-            <div class="w-full border border-slate-200 rounded-xl px-6 py-5 flex-[5]">
+        <div class="h-full w-full flex flex-col justify-between items-center">
+          <div class="w-full flex xl:flex-row flex-col mt-12 gap-5">
+            <div class="w-full border border-slate-200 rounded-2xl px-6 py-5 flex-[5] xl:max-w-[700px]">
               <h2 class="text-2xl font-semibold text-slate-800">
                 Lorem Ipsum dolor sit amet
               </h2>
@@ -59,8 +62,8 @@ import Button from "./components/ui/Button.vue";
                 </div>
               </div>
             </div>
-            <div class="w-full border border-accent-yellow-500/50 rounded-xl bg-accent-yellow-200
-            flex-[3] p-6 flex-col flex overflow-hidden">
+            <div class="w-full border border-accent-yellow-500/50 rounded-2xl bg-accent-yellow-200
+            flex-[3] p-6 flex-col flex overflow-hidden xl:max-w-[500px] min-h-[40rem]">
               <div class="flex flex-col">
                 <h2 class="text-xl font-semibold text-slate-700 mb-4 mt-3">
                   Why Should You?
@@ -105,41 +108,27 @@ import Button from "./components/ui/Button.vue";
               <img class="max-w-[16rem] w-full absolute bottom-0 left-1/2 -translate-x-1/2
               translate-y-[60%] z-10" src="public/images/girl_pose.png" alt="" />
               <div class="absolute bottom-0 w-full flex flex-col -ml-6">
-                <div class="z-0 border-t-[8rem] border-t-transparent
-              border-r-[40rem] border-r-accent-yellow-500"></div>
+                <div class="z-0 border-t-[calc(3rem+10vw)] border-t-transparent
+              border-r-[100vw] xl:border-r-[40rem] border-r-accent-yellow-500"></div>
                 <div class="h-[10rem] w-full bg-accent-yellow-500"></div>
               </div>
               <div class="z-20 relative mt-auto flex flex-col gap-1 backdrop-blur-md bg-white/45 p-4 rounded-xl">
                 <div class="flex flex-row items-end gap-1.5">
-                  <div class="bg-emerald-500 p-4 rounded-full"></div>
-                  <div class="text-lg font-semibold text-slate-700 leading-6">Trustpilot</div>
+                  <TrustpilotBrandIcon class="max-w-[7rem]" />
                 </div>
                 <div class="flex flex-row justify-between items-center">
                   <div class="text-slate-600">Excellent <span class="text-slate-800 font-semibold">4.8</span> out of 5
                   </div>
-                  <div class="flex flex-row gap-0.5">
-                    <div class="bg-emerald-500 p-3.5 rounded-full"></div>
-                    <div class="bg-emerald-500 p-3.5 rounded-full"></div>
-                    <div class="bg-emerald-500 p-3.5 rounded-full"></div>
-                    <div class="bg-emerald-500 p-3.5 rounded-full"></div>
-                    <div class="bg-emerald-500 p-3.5 rounded-full"></div>
-                  </div>
+                  <img class="max-w-[8rem]" src="/public/icons/TrustpilotStarsIcon.svg" alt="5 stars" />
                 </div>
               </div>
             </div>
           </div>
-          <div class="flex flex-col w-full justify-start mt-10 gap-1">
+          <div class="flex flex-col w-full justify-start mt-10 pb-4 gap-1">
             <div class="text-slate-500 text-xs font-medium">Do you want to speak to someone immediately?</div>
             <div class="flex flex-row gap-2">
               <div>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffc100"
-                  fill="none">
-                  <path d="M13 3C17.4183 3 21 6.58172 21 11M13.5 6.5C15.7091 6.5 17.5 8.29086 17.5 10.5"
-                    stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  <path
-                    d="M9.15825 5.71223L8.7556 4.80625C8.49232 4.21388 8.36068 3.91768 8.1638 3.69101C7.91707 3.40694 7.59547 3.19794 7.23567 3.08785C6.94858 3 6.62446 3 5.97621 3C5.02791 3 4.55375 3 4.15573 3.18229C3.68687 3.39702 3.26343 3.86328 3.09473 4.3506C2.95151 4.76429 2.99253 5.18943 3.07458 6.0397C3.94791 15.0902 8.90981 20.0521 17.9603 20.9254C18.8106 21.0075 19.2357 21.0485 19.6494 20.9053C20.1367 20.7366 20.603 20.3131 20.8177 19.8443C21 19.4462 21 18.9721 21 18.0238C21 17.3755 21 17.0514 20.9122 16.7643C20.8021 16.4045 20.5931 16.0829 20.309 15.8362C20.0823 15.6393 19.7861 15.5077 19.1937 15.2444L18.2878 14.8417C17.6462 14.5566 17.3255 14.4141 16.9995 14.3831C16.6876 14.3534 16.3731 14.3972 16.0811 14.5109C15.776 14.6297 15.5063 14.8544 14.967 15.3038C14.4301 15.7512 14.1617 15.9749 13.8337 16.0947C13.543 16.2009 13.1586 16.2403 12.8523 16.1951C12.5069 16.1442 12.2423 16.0029 11.7133 15.7201C10.0672 14.8405 9.15953 13.9328 8.27986 12.2867C7.99714 11.7577 7.85578 11.4931 7.80487 11.1477C7.75974 10.8414 7.79908 10.457 7.9053 10.1663C8.02512 9.83828 8.24881 9.56986 8.69619 9.033C9.14562 8.49368 9.37034 8.22402 9.48915 7.91891C9.60285 7.62694 9.64661 7.3124 9.61694 7.00048C9.58594 6.67452 9.44338 6.35376 9.15825 5.71223Z"
-                    stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
+                <PhoneIcon />
               </div>
               <div class="font-medium text-sm text-slate-800">0800-PHONE-ME</div>
             </div>
