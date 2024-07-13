@@ -28,34 +28,37 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
               <div class="h-px w-full bg-slate-200/75 my-4"></div>
               <div class="flex flex-col gap-3">
                 <div class="w-full">
-                  <FormField />
+                  <FormField label="Company Name" />
                 </div>
                 <div class="flex flex-row w-full gap-4 flex-wrap">
-                  <FormField class="w-full flex-1 min-w-[15rem]" />
-                  <FormField class="w-full flex-1 min-w-[15rem]" />
+                  <FormField class="w-full flex-1 min-w-[15rem]" label="First Name" isRequired />
+                  <FormField class="w-full flex-1 min-w-[15rem]" label="Last Name" isRequired />
                 </div>
                 <div class="w-full">
-                  <FormField />
+                  <FormField label="Telephone" isRequired />
                 </div>
                 <div class="w-full">
-                  <FormField />
+                  <FormField label="Email Address (Business)" isError isRequired />
                 </div>
                 <div class="flex flex-row w-full gap-4 flex-wrap">
                   <div class="relative w-full flex-1 min-w-[15rem]">
-                    <FormField />
+                    <FormField label="Password" isRequired />
                     <div class="absolute w-full flex flex-row gap-2 mt-2 px-1">
                       <div class="h-[3px] w-full bg-red-400 rounded-full"></div>
                       <div class="h-[3px] w-full bg-slate-200 rounded-full"></div>
                       <div class="h-[3px] w-full bg-slate-200 rounded-full"></div>
                     </div>
                   </div>
-                  <FormField class="w-full flex-1 min-w-[15rem]" />
+                  <FormField label="Confirm Password" class="w-full flex-1
+                    min-w-[15rem]" isRequired />
                 </div>
                 <div class="flex flex-row mt-4 gap-2">
                   <input type="checkbox" class="" />
-                  <label id="agree-terms" class="text-sm text-slate-500 font-semibold">I agree with
-                    <a class="hover:cursor-pointer hover:bg-blue-100 text-blue-400 font-semibold">terms and
-                      conditions</a></label>
+                  <label id="agree-terms" class="text-sm text-slate-500
+                    font-semibold">I agree with the
+                    <a class="hover:cursor-pointer hover:bg-sky-100 text-sky-500
+                      font-semibold">Terms and
+                      Conditions</a></label>
                 </div>
                 <div class="flex flex-row w-full justify-end mt-4">
                   <Button class="w-full sm:w-auto"></Button>
