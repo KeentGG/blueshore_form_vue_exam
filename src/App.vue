@@ -1,18 +1,9 @@
-<script setup lang="ts">
-import StepLoader from "./components/ui/StepLoader.vue";
-import FormField from "./components/ui/FormField.vue";
-import Button from "./components/ui/Button.vue";
-import TrustpilotBrandIcon from "./components/icons/TrustpilotBrandIcon.vue"
-import PhoneIcon from "./components/icons/PhoneIcon.vue"
-
-</script>
-
 <template>
   <div id="app">
     <main class="min-h-screen h-px max-w-screen-xl w-full mx-auto px-4 flex flex-col">
       <div class="relative h-full flex flex-col justify-start items-center py-4 flex-1">
         <div class="w-full px-24 my-6">
-          <StepLoader />
+          <StepLoader :stepList="stepList" />
         </div>
         <div class="h-full w-full flex flex-col justify-between items-center">
           <div class="w-full flex xl:flex-row flex-col mt-12 gap-5">
@@ -72,9 +63,7 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                   Why Should You?
                 </h2>
                 <ul class="why-container flex flex-col gap-2">
-                  <li>USP 1</li>
-                  <li>USP 2</li>
-                  <li>USP 3</li>
+                  <li v-for="item in whyList">{{ item }}</li>
                 </ul>
                 <div class="px-4 py-5 rounded-xl mt-6 bg-accent-yellow-50 border
                 border-accent-yellow-300">
@@ -142,6 +131,43 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
     </main>
   </div>
 </template>
+
+<script lang="ts">
+import StepLoader from "./components/ui/StepLoader.vue";
+import FormField from "./components/ui/FormField.vue";
+import Button from "./components/ui/Button.vue";
+import TrustpilotBrandIcon from "./components/icons/TrustpilotBrandIcon.vue"
+import PhoneIcon from "./components/icons/PhoneIcon.vue"
+
+export default {
+  name: 'App',
+  components: {
+    StepLoader,
+    FormField,
+    Button,
+    TrustpilotBrandIcon,
+    PhoneIcon,
+  },
+  data() {
+    return {
+      stepList: [
+        {
+          content: "1",
+          label: "Setup An Account",
+          isDone: false,
+        },
+        {
+          content: "2",
+          label: "Done!",
+          isDone: true,
+        },
+      ],
+      whyList: ["USP 1", "USP 2", "USP 3"]
+    }
+  }
+}
+
+</script>
 
 <style scoped>
 .why-container {
