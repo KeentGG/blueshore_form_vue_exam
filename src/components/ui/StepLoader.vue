@@ -4,8 +4,8 @@ import StepNode from "./StepNode.vue";
 
 <template>
   <div class="flex flex-row items-center w-full">
-    <StepNode class="z-20" />
+    <StepNode class="z-20" content="1" label="Setup An Account" />
     <div class="z-10 h-1 w-full bg-accent-blue-300"></div>
-    <StepNode class="z-20" />
+    <StepNode class="z-20" content="2" label="Done!" isDone />
   </div>
 </template>
