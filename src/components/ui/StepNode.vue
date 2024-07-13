@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <div class="p-3 text-white bg-accent-blue-500 border-[3px] border-blue-200 rounded-full leading-[0.5em]" :class="{
-      'bg-blue-200 text-blue-800/20': isDone
+      'bg-blue-200 text-blue-800/25': isDone
     }">
       {{ content }}
     </div>
