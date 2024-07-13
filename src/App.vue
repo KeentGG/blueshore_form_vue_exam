@@ -30,9 +30,9 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                 <div class="w-full">
                   <FormField />
                 </div>
-                <div class="flex flex-row w-full gap-4">
-                  <FormField class="w-full" />
-                  <FormField class="w-full" />
+                <div class="flex flex-row w-full gap-4 flex-wrap">
+                  <FormField class="w-full flex-1 min-w-[15rem]" />
+                  <FormField class="w-full flex-1 min-w-[15rem]" />
                 </div>
                 <div class="w-full">
                   <FormField />
@@ -40,8 +40,8 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                 <div class="w-full">
                   <FormField />
                 </div>
-                <div class="flex flex-row w-full gap-4">
-                  <div class="relative w-full">
+                <div class="flex flex-row w-full gap-4 flex-wrap">
+                  <div class="relative w-full flex-1 min-w-[15rem]">
                     <FormField />
                     <div class="absolute w-full flex flex-row gap-2 mt-2 px-1">
                       <div class="h-[3px] w-full bg-red-400 rounded-full"></div>
@@ -49,7 +49,7 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                       <div class="h-[3px] w-full bg-slate-200 rounded-full"></div>
                     </div>
                   </div>
-                  <FormField class="w-full" />
+                  <FormField class="w-full flex-1 min-w-[15rem]" />
                 </div>
                 <div class="flex flex-row mt-4 gap-2">
                   <input type="checkbox" class="" />
@@ -57,8 +57,8 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                     <a class="hover:cursor-pointer hover:bg-blue-100 text-blue-400 font-semibold">terms and
                       conditions</a></label>
                 </div>
-                <div class="flex flex-row w-full justify-end">
-                  <Button></Button>
+                <div class="flex flex-row w-full justify-end mt-4">
+                  <Button class="w-full sm:w-auto"></Button>
                 </div>
               </div>
             </div>
@@ -116,8 +116,9 @@ import PhoneIcon from "./components/icons/PhoneIcon.vue"
                 <div class="flex flex-row items-end gap-1.5">
                   <TrustpilotBrandIcon class="max-w-[7rem]" />
                 </div>
-                <div class="flex flex-row justify-between items-center">
-                  <div class="text-slate-600">Excellent <span class="text-slate-800 font-semibold">4.8</span> out of 5
+                <div class="flex flex-row justify-between items-center flex-wrap gap-1">
+                  <div class="text-slate-600 mr-1">Excellent <span class="text-slate-800 font-semibold">4.8</span> out
+                    of 5
                   </div>
                   <img class="max-w-[8rem]" src="/public/icons/TrustpilotStarsIcon.svg" alt="5 stars" />
                 </div>
