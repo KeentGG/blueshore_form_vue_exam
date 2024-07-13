@@ -98,7 +98,7 @@
                 </div>
               </div>
               <img class="max-w-[16rem] w-full absolute bottom-0 left-1/2 -translate-x-1/2
-              translate-y-[60%] z-10" src="public/images/girl_pose.png" alt="" />
+              translate-y-[60%] z-10" src="/public/images/girl_pose.png" alt="" />
               <div class="absolute bottom-0 w-full flex flex-col -ml-6">
                 <div class="z-0 border-t-[calc(3rem+10vw)] border-t-transparent
               border-r-[100vw] xl:border-r-[40rem] border-r-accent-yellow-500"></div>
